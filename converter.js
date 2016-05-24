@@ -59,13 +59,14 @@ function determineConverter () {
 
 // Assign the determineConverter function to be executed when the convert button is clicked
 convertButton.addEventListener('click', determineConverter);
-// convertButton.addEventListener('keydown', function (e) {
-//     var key = e.keyCode;
-//     if (key === 13) { // 13 is enter
-//       // code for enter
-//       determineConverter;
-//     }	
-// });
+userInput.addEventListener('keydown', function (e) {
+    var key = e.which ||  e.keyCode;
+    if (key === 13) { // 13 is enter
+      // code for enter
+      console.log("We just converted with the 'enter' key");
+      determineConverter();
+    }	
+});
 
 // clear all fields and start fresh
 
